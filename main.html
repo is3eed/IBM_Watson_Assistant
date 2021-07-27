@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel='stylesheet' href='css3.css'>
+    <title>Main menu</title>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "85cdb526-97e6-4dc5-95c9-e7c45e04c378", // The ID of this integration.
+            region: "eu-gb", // The region your integration is hosted in.
+            serviceInstanceID: "07ab2153-40b7-4ae5-b54d-a249030ba499", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+          };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</head>
+
+<body>
+    <div class="a">
+        <button id="index">Robot arm control</button>
+        <button id="movement">Robot base control</button>
+    </div>
+
+</body>
+<script>
+    var first = document.getElementById("index");
+    first.onclick = function () {
+        location = "index.html";
+    }
+    var second = document.getElementById("movement");
+    second.onclick = function () {
+        location = "control.html"
+    }
+</script>
+
+</html>
